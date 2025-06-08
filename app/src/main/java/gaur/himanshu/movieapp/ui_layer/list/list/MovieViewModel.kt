@@ -1,5 +1,6 @@
 package gaur.himanshu.movieapp.ui_layer.list.list
 
+import android.util.Log
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -27,6 +28,7 @@ class MovieViewModel @Inject constructor(private val movieRepository: MovieRepos
     private fun getMovieList() = viewModelScope.launch(Dispatchers.IO) {
         when (val result = movieRepository.getMovieList()) {
             is Resource.Success -> {
+                Log.d("srini","Movie List: ${result.data}")
                 movieList.value = MovieStateHolder(data = result.data)
             }
 
