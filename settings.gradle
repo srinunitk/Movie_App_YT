@@ -3,6 +3,7 @@ pluginManagement {
         gradlePluginPortal()
         google()
         mavenCentral()
+        maven { url 'https://androidx.dev/storage/compose-compiler/repository/' }
     }
 }
 dependencyResolutionManagement {
@@ -10,7 +11,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://androidx.dev/storage/compose-compiler/repository/' }
     }
 }
-rootProject.name = "Movie App"
+rootProject.name = "Movie_App_YT"
 include ':app'
